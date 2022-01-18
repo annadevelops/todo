@@ -6,7 +6,6 @@ const app = express();
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const date = require(__dirname + '/date.js');
-const CONFIG = require(__dirname + '/config.js')
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
@@ -16,7 +15,7 @@ const day = date.getDate();
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb+srv://admin-anna:'+ CONFIG.atlas.adminAnna + '@todo-app.alatt.mongodb.net/todoDB');
+  await mongoose.connect('mongodb+srv://admin-anna:todoapp@todo-app.alatt.mongodb.net/todoDB');
 }
 
 const itemsSchema = new mongoose.Schema({
