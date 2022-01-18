@@ -17,7 +17,7 @@
   "license": "ISC",
   "engines": {
     "node": "16.11.0"
-  }
+  },
   "bugs": {
     "url": "https://github.com/annadevelops/todo/issues"
   },
