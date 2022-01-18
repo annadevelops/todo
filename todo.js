@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { toUnicode } = require('punycode');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const _ = require('lodash');
 const mongoose = require('mongoose');
